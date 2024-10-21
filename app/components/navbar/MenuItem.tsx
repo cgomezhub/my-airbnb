@@ -1,13 +1,13 @@
 "use client";
 
 interface Props {
-  onclick: () => void;
+  onClick: () => void;
   label: string;
 }
 
-const MenuItem = ({label,onclick}:Props) => {
+const MenuItem = ({label,onClick}:Props) => {
   return <div
-  onClick={onclick}
+  onClick={onClick}
   className="
   px-4
   py-3

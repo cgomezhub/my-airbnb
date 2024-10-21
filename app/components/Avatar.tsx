@@ -1,10 +1,26 @@
 "use client";
-
+import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
 
-const Avatar = () => {
+interface Props {
+  src: string | null | undefined;  
+}
+
+const Avatar = ({ src }: Props) => {
   return (
-    <FaUserCircle />
+    <>
+      {src ? (
+        <Image
+          src={src}
+          alt="avatar"
+          width={32}
+          height={32}
+          className="rounded-full"
+        />
+      ) : (
+        <FaUserCircle />
+      )}
+    </>
   );
 };
 
